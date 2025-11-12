@@ -1,6 +1,6 @@
 # Hero & Branding Assets
 
-Place the CryptoMondays Zurich media files in this directory so the landing page can load them:
+Place the CryptoMondays Zürich media files in this directory so the landing page can load them:
 
 - `cryptomondays-logo.png`
 - `hero-photo-1.png`
