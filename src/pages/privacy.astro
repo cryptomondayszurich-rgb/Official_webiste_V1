@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const privacyUpdated = '14 November 2025';
+const termsUpdated = new Date().toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Layout title="Privacy &amp; Terms | CryptoMondays Zurich">
+  <div class="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-navy/60">Transparency matters</p>
+    <h1 class="mt-4 text-4xl font-bold tracking-tight text-brand-navy sm:text-5xl">Privacy Policy &amp; Terms of Use</h1>
+    <p class="mt-6 text-lg text-brand-navy/80">
+      We keep things simple: no ads, no trackers, and no hidden agendas. Below you can find exactly how we handle your data
+      and the ground rules for using our website.
+    </p>
+
+    <section class="mt-16 space-y-8 rounded-3xl bg-white/80 p-8 ring-1 ring-brand-soft/60 shadow-lg">
+      <header>
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-navy/60">Privacy Policy</p>
+        <h2 class="mt-2 text-2xl font-bold text-brand-navy">CryptoMondays Zurich</h2>
+        <p class="mt-2 text-sm text-brand-navy/70">Last updated: {privacyUpdated}</p>
+      </header>
+      <p class="text-base leading-7 text-brand-navy/80">
+        CryptoMondays Zurich (“we”, “our”, “us”) operates this website to share community updates, events, and initiatives.
+        We’re a Switzerland-based, non-profit community group committed to keeping your data safe.
+      </p>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">1. Who We Are</h3>
+        <div class="rounded-2xl bg-brand-pale/30 p-4 text-brand-navy/80">
+          <p>CryptoMondays Zurich</p>
+          <p>Zurich, Switzerland</p>
+          <p>Email: <a class="text-brand-bold hover:underline" href="mailto:legal@cryptomondayszurich.ch">legal@cryptomondayszurich.ch</a></p>
+          <p>Website: cryptomondayszurich.ch</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">2. Personal Data We Collect</h3>
+        <p class="text-brand-navy/80">We only collect the information you voluntarily submit through our Google Form:</p>
+        <ul class="list-disc space-y-1 pl-5 text-brand-navy/80">
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Message / inquiry details</li>
+        </ul>
+        <p class="text-brand-navy/80">
+          We do not use cookies for tracking, nor do we run advertising or behavioral analytics. Our hosting provider
+          (Vercel) only supplies anonymous, aggregate usage statistics.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">3. How We Use Your Data</h3>
+        <ul class="list-disc space-y-1 pl-5 text-brand-navy/80">
+          <li>Responding to your inquiry</li>
+          <li>Coordinating participation or partnership conversations</li>
+          <li>Supporting community-related follow-ups</li>
+        </ul>
+        <p class="text-brand-navy/80">We do not use your data for marketing and we do not run a newsletter.</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">4. Where and How Data Is Stored</h3>
+        <p class="text-brand-navy/80">Form submissions are stored only in:</p>
+        <ul class="list-disc space-y-1 pl-5 text-brand-navy/80">
+          <li>Google Forms / Google Sheets (Google LLC)</li>
+          <li>Email, when a message is forwarded to our inbox</li>
+        </ul>
+        <p class="text-brand-navy/80">We do not store data anywhere else.</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">5. Data Sharing</h3>
+        <p class="text-brand-navy/80">We never sell or share your personal data. The only processors involved are:</p>
+        <ul class="list-disc space-y-1 pl-5 text-brand-navy/80">
+          <li>Google (Forms / Sheets) – receives form submissions</li>
+          <li>Email provider – to receive your message</li>
+          <li>Vercel – anonymized, non-identifying analytics</li>
+        </ul>
+        <p class="text-brand-navy/80">These providers may operate outside Switzerland but apply appropriate safeguards.</p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">6. Legal Basis (Swiss nFADP &amp; GDPR)</h3>
+        <ul class="list-disc space-y-1 pl-5 text-brand-navy/80">
+          <li>Your consent when submitting the form</li>
+          <li>Our legitimate interest in responding to community inquiries</li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">7. Data Retention</h3>
+        <p class="text-brand-navy/80">
+          We keep your data only as long as needed to respond or maintain an active conversation. You can request deletion
+          at any time.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">8. Your Rights</h3>
+        <p class="text-brand-navy/80">You may request to:</p>
+        <ul class="list-disc space-y-1 pl-5 text-brand-navy/80">
+          <li>Access the data we store about you</li>
+          <li>Correct or delete your data</li>
+          <li>Withdraw consent at any time</li>
+        </ul>
+        <p class="text-brand-navy/80">
+          Email <a class="text-brand-bold hover:underline" href="mailto:legal@cryptomondayszurich.ch">legal@cryptomondayszurich.ch</a> to exercise these rights.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">9. Security</h3>
+        <p class="text-brand-navy/80">
+          We rely on secure hosting (Vercel) and trusted tools (Google Workspace). While we take precautions, no method of
+          transmission is 100% secure.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-brand-navy">10. Updates</h3>
+        <p class="text-brand-navy/80">
+          We may update this Privacy Policy periodically. The most recent version will always live on this page.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-16 space-y-8 rounded-3xl bg-white/80 p-8 ring-1 ring-brand-soft/60 shadow-lg">
+      <header>
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-brand-navy/60">Terms of Use</p>
+        <h2 class="mt-2 text-2xl font-bold text-brand-navy">CryptoMondays Zurich</h2>
+        <p class="mt-2 text-sm text-brand-navy/70">Last updated: {termsUpdated}</p>
+      </header>
+      <p class="text-base leading-7 text-brand-navy/80">
+        By using this website, you agree to the following community-friendly terms.
+      </p>
+
+      <ol class="space-y-6 text-brand-navy/80">
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">1. Non-Profit Purpose</h3>
+          <p>This site shares information about our events and initiatives. We do not provide investment, financial, or legal advice.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">2. Use of Website Content</h3>
+          <p>All content is informational. We strive for accuracy but cannot guarantee completeness or reliability.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">3. External Links</h3>
+          <p>We may link to third-party sites. We are not responsible for their content, availability, or privacy practices.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">4. Acceptable Use</h3>
+          <p>Users agree not to interfere with site functionality, run harmful code, scrape content, or misuse the contact form.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">5. Intellectual Property</h3>
+          <p>Unless noted, all content belongs to CryptoMondays Zurich. You may share it for non-commercial purposes with attribution.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">6. Liability</h3>
+          <p>We are not liable for damages resulting from site use, reliance on information, or third-party links/tools.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">7. Privacy</h3>
+          <p>Personal data is handled according to the Privacy Policy above, which is part of these Terms.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">8. Changes to Terms</h3>
+          <p>We may update these terms. Continuing to use the site means you accept the latest version.</p>
+        </li>
+        <li>
+          <h3 class="text-lg font-semibold text-brand-navy">9. Contact</h3>
+          <p>Questions? Email <a class="text-brand-bold hover:underline" href="mailto:legal@cryptomondayszurich.ch">legal@cryptomondayszurich.ch</a>.</p>
+        </li>
+      </ol>
+    </section>
+  </div>
+</Layout>
