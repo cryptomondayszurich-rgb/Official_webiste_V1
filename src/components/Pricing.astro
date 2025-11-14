@@ -17,88 +17,123 @@ const {href, title, body} = Astro.props;
     <p class="mt-2 text-4xl font-bold tracking-tight text-brand-navy sm:text-5xl">Become a Community Partner and Build With Us</p>
   </div>
   <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-brand-navy/80">Community partners make everything possible. Together, we create better events, stronger networks, and real opportunities for Zürich’s crypto ecosystem.</p>
-  <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-3">
-    <div class="rounded-3xl p-8 ring-1 ring-brand-soft/60 sm:p-10 relative bg-white shadow-2xl">
-      <h3 id="tier-personal" class="text-base font-semibold leading-7 text-brand-navy">Personal</h3>
-      <p class="mt-4 flex items-baseline gap-x-2">
-        <span class="text-5xl font-bold tracking-tight text-brand-navy">$19</span>
+  <div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-stretch gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-3 lg:gap-x-8">
+    <div class="rounded-3xl p-8 ring-1 ring-brand-soft/60 sm:p-10 bg-brand-pale/60 lg:order-1">
+      <h3 id="tier-starter" class="text-base font-semibold leading-7 text-brand-navy">Starter</h3>
+      <p class="mt-4 flex items-baseline gap-x-2 text-brand-navy">
+        <span class="text-5xl font-bold tracking-tight">$29</span>
         <span class="text-base text-brand-navy/60">/month</span>
       </p>
-      <p class="mt-6 text-base leading-7 text-brand-navy/80">For startups and small companies.</p>
+      <p class="mt-6 text-base leading-7 text-brand-navy/80">Ideal for new builders who want to join ZǬrich meetups and stay visible.</p>
       <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-brand-navy/80 sm:mt-10">
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          25 Items
+          2 sponsored community posts
         </li>
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          Up to 10,000 views
+          Shared booth presence
         </li>
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          Clients segmentation
+          Community directory listing
         </li>
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          Analytics
-        </li>
-        <li class="flex gap-x-3">
-          <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-          </svg>
-          Email support
-        </li>
-        <li class="flex gap-x-3">
-          <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-          </svg>
-          Email automations
+          Quarterly growth clinics
         </li>
       </ul>
-      <a href="#" aria-describedby="tier-personal" class="mt-8 block rounded-md py-2.5 px-3.5 border border-brand-vivid text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-bold sm:mt-10 bg-brand-vivid text-white shadow transition-colors hover:bg-brand-bold">Get started today</a>
+      <a href="#" aria-describedby="tier-starter" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold text-brand-navy ring-1 ring-inset ring-brand-vivid transition-colors hover:bg-brand-vivid hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-bold sm:mt-10">Join Starter</a>
     </div>
-    <div class="rounded-3xl p-8 ring-1 ring-brand-soft/60 sm:p-10 bg-brand-pale/60 sm:mx-8 lg:mx-0 sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none">
-      <h3 id="tier-team" class="text-base font-semibold leading-7 text-brand-navy">Team</h3>
+    <div class="rounded-3xl p-8 ring-1 ring-brand-soft/60 sm:p-10 relative bg-white shadow-2xl lg:order-2 lg:scale-105 lg:z-10">
+      <h3 id="tier-personal" class="text-base font-semibold leading-7 text-brand-navy">Growth</h3>
       <p class="mt-4 flex items-baseline gap-x-2">
         <span class="text-5xl font-bold tracking-tight text-brand-navy">$59</span>
         <span class="text-base text-brand-navy/60">/month</span>
       </p>
-      <p class="mt-6 text-base leading-7 text-brand-navy/80">A plan that grows with you no matter the size of your company.</p>
+      <p class="mt-6 text-base leading-7 text-brand-navy/80">For startups and small companies ready to host, hire, and scale.</p>
       <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-brand-navy/80 sm:mt-10">
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          Priority support
+          6 premium showcase listings
         </li>
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          Single sign-on
+          Targeted member campaigns
         </li>
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          Enterprise integrations
+          Speaking slots at meetups
         </li>
         <li class="flex gap-x-3">
           <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
           </svg>
-          Custom reporting tools
+          Advanced analytics dashboard
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-brand-vivid" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Concierge event support
         </li>
       </ul>
-      <a href="#" aria-describedby="tier-team" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-bold sm:mt-10 text-brand-navy transition-colors hover:text-white hover:bg-brand-vivid ring-1 ring-inset ring-brand-vivid hover:ring-brand-bold">Get started today</a>
+      <a href="#" aria-describedby="tier-personal" class="mt-8 block rounded-md py-2.5 px-3.5 border border-brand-vivid text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-bold sm:mt-10 bg-brand-vivid text-white shadow transition-colors hover:bg-brand-bold">Get started today</a>
+    </div>
+    <div class="rounded-3xl p-8 ring-1 ring-brand-soft/60 sm:p-10 bg-brand-navy text-white lg:order-3">
+      <h3 id="tier-team" class="text-base font-semibold leading-7 text-white">Enterprise</h3>
+      <p class="mt-4 flex items-baseline gap-x-2">
+        <span class="text-5xl font-bold tracking-tight text-white">$129</span>
+        <span class="text-base text-white/70">/month</span>
+      </p>
+      <p class="mt-6 text-base leading-7 text-white/80">Custom partnerships for institutions that want direct impact in ZǬrich.</p>
+      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-white/80 sm:mt-10">
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-brand-soft" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Dedicated success manager
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-brand-soft" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Unlimited sponsored events
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-brand-soft" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Co-branded community campaigns
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-brand-soft" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Quarterly strategy reviews
+        </li>
+        <li class="flex gap-x-3">
+          <svg class="h-6 w-5 flex-none text-brand-soft" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+          </svg>
+          Priority speaking opportunities
+        </li>
+      </ul>
+      <a href="#" aria-describedby="tier-team" class="mt-8 block rounded-md py-2.5 px-3.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:mt-10 text-brand-navy bg-white transition-colors hover:bg-brand-soft">Partner with us</a>
     </div>
   </div>
 </div>
