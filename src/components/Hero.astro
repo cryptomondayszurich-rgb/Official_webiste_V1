@@ -60,8 +60,8 @@ const {} = Astro.props;
             </div>
 
             <div class="mt-10 px-1 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-12 lg:w-screen relative">
-                <img id="image"
-                     class="rounded-xl top-0 left-0 w-full h-auto opacity-0 transition-opacity duration-1000 ease-in-out"
+                <img id="heroImage"
+                     class="rounded-xl top-0 left-0 w-full h-auto transition-opacity duration-1000 ease-in-out"
                      src="/assets/hero-photo-1.png"
                      alt="CryptoMondays Zürich community event"/>
                 <div class="absolute top-6 right-6 rounded-2xl bg-white/90 px-5 py-4 shadow-lg ring-1 ring-brand-soft/70">
@@ -85,42 +85,51 @@ const {} = Astro.props;
 </div>
 
 
-<script type="module">
-    const images = [
-        "/assets/hero-photo-1.png",
-        "/assets/hero-photo-2.png",
-        "/assets/hero-photo-3.png",
-    ];
-    let currentIndex = 0;
-    const totalSlides = images.length;
-    const imageElement = document.getElementById('image');
-    const slideText = document.getElementById('heroSlideText');
+<script is:inline>
+  const heroImages = [
+    "/assets/hero-photo-1.png",
+    "/assets/hero-photo-2.png",
+    "/assets/hero-photo-3.png",
+  ];
 
-    if (!imageElement) {
-        return;
+  const initHeroCarousel = () => {
+    const imageElement = document.getElementById("heroImage");
+    const slideText = document.getElementById("heroSlideText");
+
+    if (!imageElement || imageElement.dataset.carouselInitialized === "true") {
+      return;
     }
+
+    imageElement.dataset.carouselInitialized = "true";
+
+    let currentIndex = 0;
+    const totalSlides = heroImages.length;
 
     const updateIndicator = () => {
-        if (slideText) {
-            slideText.textContent = `${currentIndex + 1} / ${totalSlides}`;
-        }
+      if (slideText) {
+        slideText.textContent = `${currentIndex + 1} / ${totalSlides}`;
+      }
     };
 
-    imageElement.classList.remove('opacity-0');
     updateIndicator();
 
-    function changeImage() {
-        imageElement.classList.add('opacity-0');
+    const changeImage = () => {
+      imageElement.classList.add("opacity-0");
 
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            imageElement.src = images[currentIndex];
-            imageElement.onload = () => {
-                imageElement.classList.remove('opacity-0');
-                updateIndicator();
-            };
-        }, 1000);
-    }
+      window.setTimeout(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        imageElement.src = heroImages[currentIndex];
+      }, 600);
+    };
 
-    setInterval(changeImage, 4000);
+    imageElement.addEventListener("load", () => {
+      imageElement.classList.remove("opacity-0");
+      updateIndicator();
+    });
+
+    window.setInterval(changeImage, 4000);
+  };
+
+  document.addEventListener("DOMContentLoaded", initHeroCarousel);
+  document.addEventListener("astro:after-swap", initHeroCarousel);
 </script>
