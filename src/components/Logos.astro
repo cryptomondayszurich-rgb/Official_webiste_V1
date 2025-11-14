@@ -1,34 +1,54 @@
 ---
 interface Props {}
 
+const logos = [
+  { src: "/company/06 Internet Computer Logo.png", alt: "Internet Computer" },
+  { src: "/company/AAVE.png", alt: "AAVE" },
+  { src: "/company/Amazon_Web_Services_Logo.png", alt: "Amazon Web Services" },
+  { src: "/company/bitget.png", alt: "Bitget" },
+  { src: "/company/CV Labs.png", alt: "CV Labs" },
+  { src: "/company/CVA logo main (dark text).png", alt: "Crypto Valley Association" },
+  { src: "/company/ethereum.png", alt: "Ethereum Foundation" },
+  { src: "/company/Polygon_Primary_Dark.png", alt: "Polygon" },
+  { src: "/company/Post finance.png", alt: "PostFinance" },
+  { src: "/company/solanaLogo.png", alt: "Solana Foundation" },
+  { src: "/company/Spartan gorup.png", alt: "Spartan Group Wordmark" },
+  { src: "/company/spartan.png", alt: "Spartan Group Icon" },
+  { src: "/company/Sygnum.png", alt: "Sygnum" },
+  { src: "/company/tenity.png", alt: "Tenity" },
+  { src: "/company/uphold.png", alt: "Uphold" },
+  { src: "/company/Zksync.png", alt: "zkSync" },
+] as const;
+
 const {} = Astro.props;
 ---
 <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div
-            class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-        <img class="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
-             src="./company/c1.jpg" alt="Transistor" width="158"
-             height="48">
-        <img class="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
-             src="./company/c2.jpg" alt="Reform" width="158"
-             height="48">
-        <img class="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
-             src="./company/c3.jpg" alt="Tuple" width="158"
-             height="48">
-        <img class="col-span-2 max-h-16 w-full object-contain sm:col-start-2 lg:col-span-1"
-             src="./company/c2.jpg" alt="SavvyCal" width="158"
-             height="48">
-        <img class="col-span-2 col-start-2 max-h-16 w-full object-contain sm:col-start-auto lg:col-span-1"
-             src="./company/c1.jpg" alt="Statamic" width="158"
-             height="48">
-    </div>
-    <div class="mt-8 flex justify-center">
-        <p class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-brand-navy/80 ring-1 ring-inset ring-brand-soft hover:ring-brand-bold/60">
-            <span class="hidden md:inline">Powered by amazing partners and supporters since 2022.</span>
-            <a href="#" class="font-semibold text-brand-bold">
-                <span class="absolute inset-0" aria-hidden="true"></span>
-                Discover Our Supporters <span aria-hidden="true">&rarr;</span>
-            </a>
-        </p>
-    </div>
+  <div
+    class="mx-auto grid max-w-4xl grid-cols-2 gap-6 sm:max-w-none sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-8"
+  >
+    {logos.map((logo) => (
+      <div
+        class="flex h-24 items-center justify-center rounded-2xl bg-white/80 p-4 ring-1 ring-brand-soft/60 shadow-sm"
+      >
+        <img
+          class="max-h-14 w-full object-contain"
+          src={logo.src}
+          alt={logo.alt}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    ))}
+  </div>
+  <div class="mt-10 flex justify-center">
+    <p
+      class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-brand-navy/80 ring-1 ring-inset ring-brand-soft hover:ring-brand-bold/60"
+    >
+      <span class="hidden md:inline">Powered by amazing partners and supporters since 2022.</span>
+      <a href="#" class="font-semibold text-brand-bold">
+        <span class="absolute inset-0" aria-hidden="true"></span>
+        Discover Our Supporters <span aria-hidden="true">&rarr;</span>
+      </a>
+    </p>
+  </div>
 </div>
