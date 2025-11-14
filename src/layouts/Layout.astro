@@ -1,4 +1,4 @@
----
+﻿---
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/Footer.astro';
 
@@ -28,74 +28,14 @@ const {title} = Astro.props;
 <div class="bg-white">
   <!-- Header -->
   <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between px-6 py-3 lg:px-8 lg:py-4" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">CryptoMondays Zürich</span>
-          <img class="h-24 w-auto md:h-40 lg:h-48" src="/assets/cryptomondays-logo.png" alt="CryptoMondays Zürich logo">
-        </a>
-      </div>
-      <div id="openNavBar" class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-brand-navy hover:text-brand-bold">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-               aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="/products" class="text-sm font-semibold leading-6 text-brand-navy hover:text-brand-bold">Products</a>
-        <a href="/features" class="text-sm font-semibold leading-6 text-brand-navy hover:text-brand-bold">Features</a>
-        <a href="/company" class="text-sm font-semibold leading-6 text-brand-navy hover:text-brand-bold">Company</a>
-        <a href="/contact" class="text-sm font-semibold leading-6 text-brand-navy hover:text-brand-bold">Contact</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/login" class="text-sm font-semibold leading-6 text-brand-navy hover:text-brand-bold">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
+    <nav class="flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4" aria-label="Global">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">CryptoMondays Zürich</span>
+        <img class="h-24 w-auto md:h-40 lg:h-48" src="/assets/cryptomondays-logo.png" alt="CryptoMondays Zürich logo">
+      </a>
     </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div id="navBar" class="hidden lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div class="fixed inset-0 z-50"></div>
-      <div
-        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-brand-pale px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-brand-soft/40">
-        <div class="flex items-center justify-between">
-          <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">CryptoMondays Zürich</span>
-            <img class="h-20 w-auto md:h-28 lg:h-32" src="/assets/cryptomondays-logo.png" alt="CryptoMondays Zürich logo">
-          </a>
-          <button id="closeNavBar" type="button" class="-m-2.5 rounded-md p-2.5 text-brand-navy hover:text-brand-bold">
-            <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                 aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-brand-soft/40">
-            <div class="space-y-2 py-6">
-              <a href="/products"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-brand-navy hover:bg-brand-soft/40">Products</a>
-              <a href="/features"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-brand-navy hover:bg-brand-soft/40">Features</a>
-              <a href="/company"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-brand-navy hover:bg-brand-soft/40">Company</a>
-              <a href="/contact"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-brand-navy hover:bg-brand-soft/40">Contact</a>
-            </div>
-            <div class="py-6">
-              <a href="/login"
-                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-brand-navy hover:bg-brand-soft/40">
-                Log in
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </header>
+
 
   <main class="isolate mt-4 sm:mt-5 lg:mt-6">
     <slot />
@@ -111,15 +51,3 @@ const {title} = Astro.props;
 </html>
 
 
-<script>
-  const navBar: HTMLElement = document.getElementById('navBar');
-  const closeNavBar = document.getElementById('closeNavBar');
-  const openNavBar = document.getElementById('openNavBar');
-
-  closeNavBar.addEventListener('click', toggleMenu);
-  openNavBar.addEventListener('click', toggleMenu);
-
-  function toggleMenu() {
-    navBar.classList.toggle("hidden");
-  }
-</script>

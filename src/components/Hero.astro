@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
 }
 
@@ -29,7 +29,7 @@ const {} = Astro.props;
                                     </svg>
                                 </a>
                                 <a
-                                    href="https://www.meetup.com/es/cryptomondays-Zürich/"
+                                    href="https://www.meetup.com/es/cryptomondays-ZÃ¼rich/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-brand-navy/80"
@@ -45,18 +45,15 @@ const {} = Astro.props;
                             </div>
                         </div>
                         <h1 class="mt-8 text-4xl font-roboto tracking-tight text-brand-navy sm:text-6xl">
-                            Switzerland’s most active blockchain, crypto &amp; Web3 community
+                            Switzerlandâ€™s most active blockchain, crypto &amp; Web3 community
                         </h1>
-                        <p class="mt-6 text-lg text-brand-navy/80">From local meetups to global reach! CryptoMondays Zürich connects our community through online webinars and in-person events alike.
+                        <p class="mt-6 text-lg text-brand-navy/80">From local meetups to global reach! CryptoMondays ZÃ¼rich connects our community through online webinars and in-person events alike.
                         </p>
                         <div class="mt-8 flex items-center gap-x-6">
                             <a href="#"
                                class="rounded-md border border-brand-vivid bg-brand-vivid px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-bold">
                                 Signup
                             </a>
-                            <a href="https://github.com/eavinti/astro-landing"
-                               class="text-sm font-semibold leading-6 text-brand-bold">Get the code<span
-                                    aria-hidden="true">→</span></a>
                         </div>
                     </div>
                 </div>
@@ -66,17 +63,16 @@ const {} = Astro.props;
                 <img id="image"
                      class="rounded-xl top-0 left-0 w-full h-auto opacity-0 transition-opacity duration-1000 ease-in-out"
                      src="/assets/hero-photo-1.png"
-                     alt="CryptoMondays Zürich community event"/>
-                <div class="absolute top-6 right-6 rounded-bl-xl p-4 bg-brand-pale">
-                    <svg class="h-2 w-2 inline fill-brand-bold mr-2" viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3"/>
-                    </svg>
-                    <svg class="h-2 w-2 inline fill-brand-soft mr-2" viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3"/>
-                    </svg>
-                    <svg class="h-2 w-2 inline fill-brand-soft mr-2" viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3"/>
-                    </svg>
+                     alt="CryptoMondays ZÃ¼rich community event"/>
+                <div class="absolute top-6 right-6 rounded-2xl bg-white/90 px-5 py-4 shadow-lg ring-1 ring-brand-soft/70">
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-navy/60">Live carousel</p>
+                    <div class="mt-2 flex items-center gap-3">
+                        <span id="heroSlideText" class="text-base font-bold text-brand-navy">1 / 3</span>
+                        <span class="relative flex h-3 w-3">
+                            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-vivid opacity-70"></span>
+                            <span class="relative inline-flex h-3 w-3 rounded-full bg-brand-vivid"></span>
+                        </span>
+                    </div>
                 </div>
 
                 
@@ -96,28 +92,35 @@ const {} = Astro.props;
         "/assets/hero-photo-3.png",
     ];
     let currentIndex = 0;
+    const totalSlides = images.length;
     const imageElement = document.getElementById('image');
+    const slideText = document.getElementById('heroSlideText');
 
-    // Initially, set the image opacity to 100 to ensure it is visible
+    if (!imageElement) {
+        return;
+    }
+
+    const updateIndicator = () => {
+        if (slideText) {
+            slideText.textContent = `${currentIndex + 1} / ${totalSlides}`;
+        }
+    };
+
     imageElement.classList.remove('opacity-0');
+    updateIndicator();
 
     function changeImage() {
-        // Add opacity class 0 to make the current image transparent
         imageElement.classList.add('opacity-0');
 
         setTimeout(() => {
-            currentIndex++;
-            if (currentIndex >= images.length) {
-                currentIndex = 0;
-            }
+            currentIndex = (currentIndex + 1) % totalSlides;
             imageElement.src = images[currentIndex];
-            // Wait for the image to load before making it visible
             imageElement.onload = () => {
-                imageElement.classList.remove('opacity-0'); // Make the new image visible
+                imageElement.classList.remove('opacity-0');
+                updateIndicator();
             };
-        }, 1000); // This time should match the duration of the opacity transition
+        }, 1000);
     }
 
-    // Starts image transition every 4 seconds (includes 1 second for transition duration)
     setInterval(changeImage, 4000);
 </script>
